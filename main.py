@@ -1,4 +1,5 @@
 from students import add_student, view_students, update_student, delete_student
+from courses import add_courses,view_courses
 
 def menu():
     while True:
@@ -8,6 +9,8 @@ def menu():
         print("3. Update Student")
         print("4. Delete Student")
         print("5. Exit")
+        print("6. add_courses")
+        print("7. view_courses")
 
         choice = input("Enter choice: ")
 
@@ -35,6 +38,13 @@ def menu():
 
         elif choice == "5":
             break
+
+        elif choice == "6":
+            name=input("Enter course name: ")
+            add_courses(name)
+
+        elif choice == "7":
+            view_courses()
 
         else:
             print("Invalid choice")
